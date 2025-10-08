@@ -1,6 +1,6 @@
 import React from 'react';
 
-const HomeApps = () => {
+const AllApps = () => {
     return (
         <div>
             apps
@@ -8,4 +8,4 @@ const HomeApps = () => {
     );
 };
 
-export default HomeApps;
+export default AllApps;
