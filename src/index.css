@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+@plugin "daisyui";
+
+* {
+    font-family: "Inter", sans-serif;
+}
+
+/* ul a.active {
+    @apply underline-offset-8 decoration-transparent bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent;
+} */
+ul a.active {
+    @apply underline underline-offset-4 text-purple-600;
+}
