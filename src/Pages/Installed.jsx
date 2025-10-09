@@ -11,17 +11,19 @@ const Installed = () => {
             setInstalled(installedList)
         }
     }, [])
-    const sortedItem = () => {
-        if (sortOrder === 'low-dwn') {
-            return [...installed].sort((a, b) => a.downloads - b.downloads)
-        }
-        else if(sortOrder === 'high-dwn'){
-            return [...installed].sort((a, b) => b.downloads - a.downloads)
-        }
-        else{
-            return installed
-        }
-    }
+    const sortedItem = (
+        () => {
+            if (sortOrder === 'low-dwn') {
+                return [...installed].sort((a, b) => a.downloads - b.downloads)
+            }
+            else if (sortOrder === 'high-dwn') {
+                return [...installed].sort((a, b) => b.downloads - a.downloads)
+            }
+            else {
+                return installed
+            }
+        })()
+
     return (
         <div className='pt-7 bg-gray-100 '>
             <div className='max-w-[1200px] mx-auto'>
@@ -44,7 +46,7 @@ const Installed = () => {
                 </div>
                 <div className='m-2'>
                     {
-                        sortedItem().map(app => <InstalledCard key={app.id} app={app}></InstalledCard>)
+                        sortedItem.map(app => <InstalledCard key={app.id} setInstalled={setInstalled} app={app}></InstalledCard>)
                     }
                 </div>
             </div>

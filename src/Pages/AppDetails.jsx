@@ -4,6 +4,7 @@ import useApps from '../hooks/useApps';
 import { Download, Star } from 'lucide-react';
 import review from '../assets/icon-review.png';
 import rating from '../assets/icon-ratings.png'
+import { Bar, BarChart, CartesianGrid, Legend, Rectangle, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
 const AppDetails = () => {
     const { id } = useParams()
@@ -25,6 +26,9 @@ const AppDetails = () => {
         }
         localStorage.setItem('installed', JSON.stringify(updatedList))
     }
+    const parsedRatings = typeof clickedApp?.ratings === "string"
+        ? JSON.parse(clickedApp.ratings)
+        : clickedApp?.ratings || [];
     return (
         <div className='bg-gray-100'>
             <div className='flex gap-9  items-start p-24 md:pb-8 border-b-1 border-gray-400'>
@@ -58,11 +62,24 @@ const AppDetails = () => {
                     <button onClick={handleInstalled} className='btn bg-[#00D390] text-white btn-lg'>Install Now <span>({size} MB)</span></button>
                 </div>
             </div>
-            <div>
+            <div className="p-2">
+                <h1 className='text-lg font-bold'>Ratings</h1>
+                <ResponsiveContainer width="90%" height={300}>
+                    <BarChart data={[...parsedRatings].reverse()} layout="vertical" margin={{ top: 10, right: 30, left: 50, bottom: 10 }}>
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis type="number" />
+                        <YAxis type="category" dataKey="name" />
+                        <Bar dataKey="count" fill="#FF8C00" barSize={25} />
+                        <Tooltip></Tooltip>
+                    </BarChart>
+                </ResponsiveContainer>
+            </div>
+            <div className='p-2'>
                 <h1 className='text-xl font-bold'>Description</h1>
                 <p className='text-gray-500'>{description}</p>
             </div>
-        </div>
+        </div >
+
     );
 };
 
