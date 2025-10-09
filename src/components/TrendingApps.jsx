@@ -1,11 +1,13 @@
 import { Library } from 'lucide-react';
 import React from 'react';
-import { Link, useLoaderData } from 'react-router';
+import { Link} from 'react-router';
 import SingleAppCard from './SingleAppCard';
+import useApps from '../hooks/useApps';
 
 const TrendingApps = () => {
-    const allApps = useLoaderData()
-    const trendingApps = allApps.slice(0,8)
+    // const allApps = useLoaderData()
+    const {apps,loading,error}=useApps()
+    const trendingApps = apps.slice(0,8)
     return (
         <div className='bg-gray-100  max-w-[1180px] mx-auto'>
             <div className='text-center py-12 '>
