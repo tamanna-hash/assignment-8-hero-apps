@@ -1,4 +1,3 @@
-import { Search } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import InstalledCard from '../components/InstalledCard';
 
@@ -31,7 +30,7 @@ const Installed = () => {
                     <h1 className='text-4xl font-bold mb-4'>Your Installed Apps</h1>
                     <p className='text-sm text-gray-500'>Explore All Apps on the Market developed by us.</p>
                     <div className='my-6 flex justify-between'>
-                        <p className='text-lg font-semibold'><span>({installed.length})</span> Apps Found</p>
+                        <p className='md:text-lg font-semibold'><span>({installed.length})</span> Apps Found</p>
                         <label className='form-control w-full max-w-xs'>
                             <select
                                 className='select select-bordered'

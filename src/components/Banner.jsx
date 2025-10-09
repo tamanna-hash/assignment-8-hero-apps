@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
-import appstore from '../assets/appstore.webp'
-import playstore from '../assets/playstore.png'
+import appStore from '../assets/appstore.webp'
+import playStore from '../assets/playstore.png'
 
 const Banner = () => {
     return (
@@ -14,8 +14,8 @@ const Banner = () => {
                     Our goal is to turn your ideas into digital experiences that truly make an impact.
                 </p>
                 <div className='flex justify-center mt-7 gap-3'>
-                    <Link to='https://play.google.com/store/apps'><button className='btn border-gray-300 '><img src={playstore} className='h-[30px] w-[30px]' alt="" />Google Play</button></Link>
-                    <Link to='https://www.apple.com/app-store/'><button className='btn border-gray-300 '><img src={appstore} className='h-[30px] w-[30px]' alt="" />App Store</button></Link>
+                    <Link to='https://play.google.com/store/apps'><button className='btn border-gray-300 '><img src={playStore} className='h-[30px] w-[30px]' alt="" />Google Play</button></Link>
+                    <Link to='https://www.apple.com/app-store/'><button className='btn border-gray-300 '><img src={appStore} className='h-[30px] w-[30px]' alt="" />App Store</button></Link>
                 </div>
             </div>
 

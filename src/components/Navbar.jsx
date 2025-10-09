@@ -27,8 +27,8 @@ const Navbar = () => {
                     </div>
                     <Link to='/' >
                         <div className='flex items-center'>
-                            <img src={logo} alt="" className='h-[50px] w-[50px]' />
-                            <h1 className="text-xl font-semibold bg-gradient-to-r  from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent">HERO.IO</h1>
+                            <img src={logo} alt="" className='h-[20px] w-[20px] md:h-[50px] md:w-[50px]' />
+                            <h1 className="md:text-xl font-semibold bg-gradient-to-r  from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent">HERO.IO</h1>
                         </div>
                     </Link>
                 </div>
@@ -47,7 +47,7 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                    <Link to='https://github.com/tamanna-hash/assignment-8-hero-apps'>
-                    <button className='btn flex text-white bg-gradient-to-r  from-[#632EE3] to-[#9F62F2]'>
+                    <button className='btn btn-sm md:btn-md flex text-white bg-gradient-to-r  from-[#632EE3] to-[#9F62F2]'>
                         <Github />
                         <p>Contribute</p>
                         </button>

@@ -6,9 +6,6 @@
     font-family: "Inter", sans-serif;
 }
 
-/* ul a.active {
-    @apply underline-offset-8 decoration-transparent bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent;
-} */
 ul a.active {
     @apply underline underline-offset-4 text-purple-600;
 }

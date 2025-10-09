@@ -6,7 +6,7 @@ const Footer = () => {
             <footer className="footer sm:footer-horizontal bg-[#001931] text-neutral-content items-center p-10">
                 <nav >
                     <div className='flex gap-2 items-center border-b-1 border-gray-300'>
-                        <img src={logo} alt="" className='h-[50px] w-[50px]' />
+                        <img src={logo} alt="" className='h-[30px] w-[30px] md:h-[50px] md:w-[50px]' />
                         <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
                     </div>
                 </nav>
