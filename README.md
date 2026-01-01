@@ -1,8 +1,9 @@
 ## HERO.IO
 ---
 <img src="https://github.com/tamanna-hash/assignment-8-hero-apps/blob/main/heroapps.png?raw=true" height="300px" width="400px">
-## Live Link 
-## Description
+
+## Live Link [https://coruscating-queijadas-7a4b1a.netlify.app/] 
+## Project Purpose
 This React application allows users to view app details and install apps directly from the interface.  
 The “Install Now” button stores installed apps in `localStorage` and prevents duplicate installations.  
 The application also features:
